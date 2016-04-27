@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70A671C11CD1893000698D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671C01CD1893000698D08 /* AppDelegate.swift */; };
+		70A671C31CD1893000698D08 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671C21CD1893000698D08 /* MasterViewController.swift */; };
+		70A671C51CD1893000698D08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671C41CD1893000698D08 /* DetailViewController.swift */; };
+		70A671C81CD1893000698D08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A671C61CD1893000698D08 /* Main.storyboard */; };
+		70A671CA1CD1893000698D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A671C91CD1893000698D08 /* Assets.xcassets */; };
+		70A671CD1CD1893000698D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A671CB1CD1893000698D08 /* LaunchScreen.storyboard */; };
+		70A671D81CD1893100698D08 /* DynamitSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671D71CD1893100698D08 /* DynamitSampleProjectTests.swift */; };
+		70A671E31CD1893100698D08 /* DynamitSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671E21CD1893100698D08 /* DynamitSampleProjectUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70A671D41CD1893100698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A671B51CD1893000698D08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70A671BC1CD1893000698D08;
+			remoteInfo = DynamitSampleProject;
+		};
+		70A671DF1CD1893100698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A671B51CD1893000698D08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70A671BC1CD1893000698D08;
+			remoteInfo = DynamitSampleProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70A671BD1CD1893000698D08 /* DynamitSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamitSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A671C01CD1893000698D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70A671C21CD1893000698D08 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		70A671C41CD1893000698D08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		70A671C71CD1893000698D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70A671C91CD1893000698D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70A671CC1CD1893000698D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70A671CE1CD1893000698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A671D31CD1893100698D08 /* DynamitSampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamitSampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A671D71CD1893100698D08 /* DynamitSampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamitSampleProjectTests.swift; sourceTree = "<group>"; };
+		70A671D91CD1893100698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A671DE1CD1893100698D08 /* DynamitSampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamitSampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A671E21CD1893100698D08 /* DynamitSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamitSampleProjectUITests.swift; sourceTree = "<group>"; };
+		70A671E41CD1893100698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70A671BA1CD1893000698D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A671D01CD1893100698D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A671DB1CD1893100698D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70A671B41CD1893000698D08 = {
+			isa = PBXGroup;
+			children = (
+				70A671BF1CD1893000698D08 /* DynamitSampleProject */,
+				70A671D61CD1893100698D08 /* DynamitSampleProjectTests */,
+				70A671E11CD1893100698D08 /* DynamitSampleProjectUITests */,
+				70A671BE1CD1893000698D08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70A671BE1CD1893000698D08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70A671BD1CD1893000698D08 /* DynamitSampleProject.app */,
+				70A671D31CD1893100698D08 /* DynamitSampleProjectTests.xctest */,
+				70A671DE1CD1893100698D08 /* DynamitSampleProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70A671BF1CD1893000698D08 /* DynamitSampleProject */ = {
+			isa = PBXGroup;
+			children = (
+				70A671C01CD1893000698D08 /* AppDelegate.swift */,
+				70A671C21CD1893000698D08 /* MasterViewController.swift */,
+				70A671C41CD1893000698D08 /* DetailViewController.swift */,
+				70A671C61CD1893000698D08 /* Main.storyboard */,
+				70A671C91CD1893000698D08 /* Assets.xcassets */,
+				70A671CB1CD1893000698D08 /* LaunchScreen.storyboard */,
+				70A671CE1CD1893000698D08 /* Info.plist */,
+			);
+			path = DynamitSampleProject;
+			sourceTree = "<group>";
+		};
+		70A671D61CD1893100698D08 /* DynamitSampleProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				70A671D71CD1893100698D08 /* DynamitSampleProjectTests.swift */,
+				70A671D91CD1893100698D08 /* Info.plist */,
+			);
+			path = DynamitSampleProjectTests;
+			sourceTree = "<group>";
+		};
+		70A671E11CD1893100698D08 /* DynamitSampleProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70A671E21CD1893100698D08 /* DynamitSampleProjectUITests.swift */,
+				70A671E41CD1893100698D08 /* Info.plist */,
+			);
+			path = DynamitSampleProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70A671BC1CD1893000698D08 /* DynamitSampleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70A671E71CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProject" */;
+			buildPhases = (
+				70A671B91CD1893000698D08 /* Sources */,
+				70A671BA1CD1893000698D08 /* Frameworks */,
+				70A671BB1CD1893000698D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamitSampleProject;
+			productName = DynamitSampleProject;
+			productReference = 70A671BD1CD1893000698D08 /* DynamitSampleProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70A671D21CD1893100698D08 /* DynamitSampleProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70A671EA1CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProjectTests" */;
+			buildPhases = (
+				70A671CF1CD1893100698D08 /* Sources */,
+				70A671D01CD1893100698D08 /* Frameworks */,
+				70A671D11CD1893100698D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70A671D51CD1893100698D08 /* PBXTargetDependency */,
+			);
+			name = DynamitSampleProjectTests;
+			productName = DynamitSampleProjectTests;
+			productReference = 70A671D31CD1893100698D08 /* DynamitSampleProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		70A671DD1CD1893100698D08 /* DynamitSampleProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70A671ED1CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProjectUITests" */;
+			buildPhases = (
+				70A671DA1CD1893100698D08 /* Sources */,
+				70A671DB1CD1893100698D08 /* Frameworks */,
+				70A671DC1CD1893100698D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70A671E01CD1893100698D08 /* PBXTargetDependency */,
+			);
+			name = DynamitSampleProjectUITests;
+			productName = DynamitSampleProjectUITests;
+			productReference = 70A671DE1CD1893100698D08 /* DynamitSampleProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70A671B51CD1893000698D08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ryan Sjoquist";
+				TargetAttributes = {
+					70A671BC1CD1893000698D08 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					70A671D21CD1893100698D08 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 70A671BC1CD1893000698D08;
+					};
+					70A671DD1CD1893100698D08 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 70A671BC1CD1893000698D08;
+					};
+				};
+			};
+			buildConfigurationList = 70A671B81CD1893000698D08 /* Build configuration list for PBXProject "DynamitSampleProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70A671B41CD1893000698D08;
+			productRefGroup = 70A671BE1CD1893000698D08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70A671BC1CD1893000698D08 /* DynamitSampleProject */,
+				70A671D21CD1893100698D08 /* DynamitSampleProjectTests */,
+				70A671DD1CD1893100698D08 /* DynamitSampleProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70A671BB1CD1893000698D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A671CD1CD1893000698D08 /* LaunchScreen.storyboard in Resources */,
+				70A671CA1CD1893000698D08 /* Assets.xcassets in Resources */,
+				70A671C81CD1893000698D08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A671D11CD1893100698D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A671DC1CD1893100698D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70A671B91CD1893000698D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A671C51CD1893000698D08 /* DetailViewController.swift in Sources */,
+				70A671C31CD1893000698D08 /* MasterViewController.swift in Sources */,
+				70A671C11CD1893000698D08 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A671CF1CD1893100698D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A671D81CD1893100698D08 /* DynamitSampleProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A671DA1CD1893100698D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A671E31CD1893100698D08 /* DynamitSampleProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70A671D51CD1893100698D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70A671BC1CD1893000698D08 /* DynamitSampleProject */;
+			targetProxy = 70A671D41CD1893100698D08 /* PBXContainerItemProxy */;
+		};
+		70A671E01CD1893100698D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70A671BC1CD1893000698D08 /* DynamitSampleProject */;
+			targetProxy = 70A671DF1CD1893100698D08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70A671C61CD1893000698D08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70A671C71CD1893000698D08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70A671CB1CD1893000698D08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70A671CC1CD1893000698D08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70A671E51CD1893100698D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70A671E61CD1893100698D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70A671E81CD1893100698D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DynamitSampleProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansjoquist.DynamitSampleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70A671E91CD1893100698D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DynamitSampleProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansjoquist.DynamitSampleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		70A671EB1CD1893100698D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DynamitSampleProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansjoquist.DynamitSampleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamitSampleProject.app/DynamitSampleProject";
+			};
+			name = Debug;
+		};
+		70A671EC1CD1893100698D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DynamitSampleProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansjoquist.DynamitSampleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamitSampleProject.app/DynamitSampleProject";
+			};
+			name = Release;
+		};
+		70A671EE1CD1893100698D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DynamitSampleProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansjoquist.DynamitSampleProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DynamitSampleProject;
+			};
+			name = Debug;
+		};
+		70A671EF1CD1893100698D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DynamitSampleProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansjoquist.DynamitSampleProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DynamitSampleProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70A671B81CD1893000698D08 /* Build configuration list for PBXProject "DynamitSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70A671E51CD1893100698D08 /* Debug */,
+				70A671E61CD1893100698D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70A671E71CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70A671E81CD1893100698D08 /* Debug */,
+				70A671E91CD1893100698D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70A671EA1CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70A671EB1CD1893100698D08 /* Debug */,
+				70A671EC1CD1893100698D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70A671ED1CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70A671EE1CD1893100698D08 /* Debug */,
+				70A671EF1CD1893100698D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70A671B51CD1893000698D08 /* Project object */;
+}
