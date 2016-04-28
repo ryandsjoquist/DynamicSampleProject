@@ -8,19 +8,18 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
-
+class MasterViewController: UITableViewController,NSURLSessionDelegate {
+    
+    let jsonURL = NSURL(string: "http://api.randomuser.me/?results=15")!
     var detailViewController: DetailViewController? = nil
-    var objects = [AnyObject]()
-
-
+    
+    var personData:[Person] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        httpGet(NSMutableURLRequest(URL: jsonURL))
+        
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -32,25 +31,15 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
 
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -64,31 +53,100 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return personData.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        let person = personData[indexPath.row]
+        cell.textLabel?.text = String(person.firstName + "," + person.lastName)
         return cell
     }
-
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func do_refresh() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView?.reloadData()
+        })
     }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    
+//MARK : - JSON Parsing
+    
+    func parseJSON(json:[String:AnyObject]) {
+        guard let personArrayJson = json["results"] as? [[String:AnyObject]] else{
+            print("invalid result json")
+            return
+        }
+        personData = []
+        for personJson in personArrayJson {
+            
+            if let gender = personJson["gender"] as? String,
+                email = personJson["email"] as? String,
+                cellNumber = personJson["cell"] as? String,
+                phoneNumber = personJson["phone"] as? String,
+                pictureJson = personJson["picture"] as? [String:AnyObject],
+                loginJson = personJson["login"] as? [String:AnyObject],
+                nameJson = personJson["name"] as? [String:AnyObject],
+                firstName = nameJson["first"] as? String,
+                lastName = nameJson["last"] as? String,
+                title = nameJson["title"] as? String,
+                locationJson = personJson["location"] as? [String:AnyObject],
+                street = locationJson["street"] as? String,
+                city = locationJson["city"] as? String,
+                state = locationJson["state"] as? String,
+                postcodeValue = locationJson["postcode"],
+                username = loginJson["username"] as? String,
+                password = loginJson["password"] as? String,
+                sha256 = loginJson["sha256"] as? String,
+                largeImageURLString = pictureJson["large"] as? String,
+                mediumImageURLString = pictureJson["medium"] as? String,
+                thumbnailImageURLString = pictureJson["thumbnail"] as? String,
+                nationality = personJson["nat"] as? String,
+                largeImageURL = NSURL(string:largeImageURLString),
+                mediumImageURL = NSURL(string:mediumImageURLString),
+                thumbnailImageURL = NSURL(string: thumbnailImageURLString)
+            {
+                let postcode = String(postcodeValue)
+                let newPerson = Person(gender: gender,
+                                       firstName: firstName,
+                                       lastName: lastName,
+                                       title: title,
+                                       streetLocation: street,
+                                       cityLocation: city,
+                                       stateLocation: state,
+                                       postcode: postcode,
+                                       email: email,
+                                       loginUsername: username,
+                                       loginPassword: password,
+                                       loginSHA256: sha256,
+                                       phoneNumber: phoneNumber,
+                                       cellNumber: cellNumber,
+                                       largeImageURL: largeImageURL,
+                                       mediumImageURL: mediumImageURL,
+                                       thumbnailImageURL: thumbnailImageURL,
+                                       nationality: nationality)
+                personData.append(newPerson)
+            }
+            else{
+                print("error invalid person entry: \(personJson)")
+            }
         }
     }
-
-
+    
+    func httpGet(request:NSMutableURLRequest!) {
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config,
+                                   delegate: self,
+                                   delegateQueue: NSOperationQueue.mainQueue())
+        
+        let task = session.dataTaskWithRequest(request){
+            (data,response,error) -> Void in
+            if error == nil{
+                let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                self.parseJSON(json as! [String:AnyObject])
+                self.do_refresh()
+            }
+        }
+        task.resume()
+    }
 }
 
