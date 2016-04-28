@@ -12,7 +12,7 @@ import Haneke
 class MasterViewController: UITableViewController,NSURLSessionDelegate {
     
     let cache = Shared.JSONCache
-    let jsonURL = NSURL(string: "http://api.randomuser.me/?results=15")!
+    let jsonURL = NSURL(string: "http://api.randomuser.me/?results=25")!
     var detailViewController: DetailViewController? = nil
     
     var personData:[Person] = []
