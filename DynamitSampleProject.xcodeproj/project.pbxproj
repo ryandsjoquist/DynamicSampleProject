@@ -15,6 +15,9 @@
 		70A671CD1CD1893000698D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A671CB1CD1893000698D08 /* LaunchScreen.storyboard */; };
 		70A671D81CD1893100698D08 /* DynamitSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671D71CD1893100698D08 /* DynamitSampleProjectTests.swift */; };
 		70A671E31CD1893100698D08 /* DynamitSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671E21CD1893100698D08 /* DynamitSampleProjectUITests.swift */; };
+		70A671F31CD18B7800698D08 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A671F21CD18B7800698D08 /* Person.swift */; };
+		70A675961CD25A1400698D08 /* Haneke.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70A6758D1CD259FE00698D08 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		70A675981CD25C3300698D08 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A675971CD25C3300698D08 /* PersonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +35,55 @@
 			remoteGlobalIDString = 70A671BC1CD1893000698D08;
 			remoteInfo = DynamitSampleProject;
 		};
+		70A6758C1CD259FE00698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A675851CD259FE00698D08 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9561980418C00CD0F4C;
+			remoteInfo = "Haneke-iOS";
+		};
+		70A6758E1CD259FE00698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A675851CD259FE00698D08 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6393C5F71C3B229200EB1FD8;
+			remoteInfo = "Haneke-tvOS";
+		};
+		70A675901CD259FE00698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A675851CD259FE00698D08 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9611980418C00CD0F4C;
+			remoteInfo = HanekeTests;
+		};
+		70A675921CD259FE00698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A675851CD259FE00698D08 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0026E9A19C9BFBC004DE0C6;
+			remoteInfo = HanekeDemo;
+		};
+		70A675941CD25A0B00698D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A675851CD259FE00698D08 /* Haneke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A095C9551980418C00CD0F4C;
+			remoteInfo = "Haneke-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70A673E11CD257FD00698D08 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				70A675961CD25A1400698D08 /* Haneke.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		70A671BD1CD1893000698D08 /* DynamitSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamitSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +100,9 @@
 		70A671DE1CD1893100698D08 /* DynamitSampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamitSampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A671E21CD1893100698D08 /* DynamitSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamitSampleProjectUITests.swift; sourceTree = "<group>"; };
 		70A671E41CD1893100698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A671F21CD18B7800698D08 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		70A675851CD259FE00698D08 /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "../HanekeSwift-master/Haneke.xcodeproj"; sourceTree = "<group>"; };
+		70A675971CD25C3300698D08 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +137,7 @@
 				70A671D61CD1893100698D08 /* DynamitSampleProjectTests */,
 				70A671E11CD1893100698D08 /* DynamitSampleProjectUITests */,
 				70A671BE1CD1893000698D08 /* Products */,
+				70A675851CD259FE00698D08 /* Haneke.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +156,9 @@
 			children = (
 				70A671C01CD1893000698D08 /* AppDelegate.swift */,
 				70A671C21CD1893000698D08 /* MasterViewController.swift */,
+				70A675971CD25C3300698D08 /* PersonCell.swift */,
 				70A671C41CD1893000698D08 /* DetailViewController.swift */,
+				70A671F21CD18B7800698D08 /* Person.swift */,
 				70A671C61CD1893000698D08 /* Main.storyboard */,
 				70A671C91CD1893000698D08 /* Assets.xcassets */,
 				70A671CB1CD1893000698D08 /* LaunchScreen.storyboard */,
@@ -128,6 +185,17 @@
 			path = DynamitSampleProjectUITests;
 			sourceTree = "<group>";
 		};
+		70A675861CD259FE00698D08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70A6758D1CD259FE00698D08 /* Haneke.framework */,
+				70A6758F1CD259FE00698D08 /* Haneke.framework */,
+				70A675911CD259FE00698D08 /* HanekeTests.xctest */,
+				70A675931CD259FE00698D08 /* HanekeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +206,12 @@
 				70A671B91CD1893000698D08 /* Sources */,
 				70A671BA1CD1893000698D08 /* Frameworks */,
 				70A671BB1CD1893000698D08 /* Resources */,
+				70A673E11CD257FD00698D08 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				70A675951CD25A0B00698D08 /* PBXTargetDependency */,
 			);
 			name = DynamitSampleProject;
 			productName = DynamitSampleProject;
@@ -218,6 +288,12 @@
 			mainGroup = 70A671B41CD1893000698D08;
 			productRefGroup = 70A671BE1CD1893000698D08 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 70A675861CD259FE00698D08 /* Products */;
+					ProjectRef = 70A675851CD259FE00698D08 /* Haneke.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				70A671BC1CD1893000698D08 /* DynamitSampleProject */,
@@ -226,6 +302,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		70A6758D1CD259FE00698D08 /* Haneke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Haneke.framework;
+			remoteRef = 70A6758C1CD259FE00698D08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70A6758F1CD259FE00698D08 /* Haneke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Haneke.framework;
+			remoteRef = 70A6758E1CD259FE00698D08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70A675911CD259FE00698D08 /* HanekeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HanekeTests.xctest;
+			remoteRef = 70A675901CD259FE00698D08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70A675931CD259FE00698D08 /* HanekeDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HanekeDemo.app;
+			remoteRef = 70A675921CD259FE00698D08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		70A671BB1CD1893000698D08 /* Resources */ = {
@@ -260,7 +367,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70A671C51CD1893000698D08 /* DetailViewController.swift in Sources */,
+				70A675981CD25C3300698D08 /* PersonCell.swift in Sources */,
 				70A671C31CD1893000698D08 /* MasterViewController.swift in Sources */,
+				70A671F31CD18B7800698D08 /* Person.swift in Sources */,
 				70A671C11CD1893000698D08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +402,11 @@
 			isa = PBXTargetDependency;
 			target = 70A671BC1CD1893000698D08 /* DynamitSampleProject */;
 			targetProxy = 70A671DF1CD1893100698D08 /* PBXContainerItemProxy */;
+		};
+		70A675951CD25A0B00698D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Haneke-iOS";
+			targetProxy = 70A675941CD25A0B00698D08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -488,6 +602,7 @@
 				70A671E91CD1893100698D08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70A671EA1CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +611,7 @@
 				70A671EC1CD1893100698D08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70A671ED1CD1893100698D08 /* Build configuration list for PBXNativeTarget "DynamitSampleProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +620,7 @@
 				70A671EF1CD1893100698D08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

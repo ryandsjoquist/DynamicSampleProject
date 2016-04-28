@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Haneke
 
 class MasterViewController: UITableViewController,NSURLSessionDelegate {
     
+    let cache = Shared.JSONCache
     let jsonURL = NSURL(string: "http://api.randomuser.me/?results=15")!
     var detailViewController: DetailViewController? = nil
     
@@ -18,8 +20,6 @@ class MasterViewController: UITableViewController,NSURLSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         httpGet(NSMutableURLRequest(URL: jsonURL))
-        
-        // Do any additional setup after loading the view, typically from a nib.
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -39,9 +39,10 @@ class MasterViewController: UITableViewController,NSURLSessionDelegate {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                controller.person = personData[indexPath.row]
+                
             }
         }
     }
@@ -57,9 +58,11 @@ class MasterViewController: UITableViewController,NSURLSessionDelegate {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PersonCell
         let person = personData[indexPath.row]
-        cell.textLabel?.text = String(person.firstName + "," + person.lastName)
+        
+        cell.setUpCell(String(person.firstName + " " + person.lastName), imageURL:person.thumbnailImageURL)
+        
         return cell
     }
     
@@ -106,13 +109,13 @@ class MasterViewController: UITableViewController,NSURLSessionDelegate {
                 thumbnailImageURL = NSURL(string: thumbnailImageURLString)
             {
                 let postcode = String(postcodeValue)
-                let newPerson = Person(gender: gender,
-                                       firstName: firstName,
-                                       lastName: lastName,
-                                       title: title,
-                                       streetLocation: street,
-                                       cityLocation: city,
-                                       stateLocation: state,
+                let newPerson = Person(gender: gender.capitalizedString,
+                                       firstName: firstName.capitalizedString,
+                                       lastName: lastName.capitalizedString,
+                                       title: title.capitalizedString,
+                                       streetLocation: street.capitalizedString,
+                                       cityLocation: city.capitalizedString,
+                                       stateLocation: state.capitalizedString,
                                        postcode: postcode,
                                        email: email,
                                        loginUsername: username,
@@ -123,7 +126,7 @@ class MasterViewController: UITableViewController,NSURLSessionDelegate {
                                        largeImageURL: largeImageURL,
                                        mediumImageURL: mediumImageURL,
                                        thumbnailImageURL: thumbnailImageURL,
-                                       nationality: nationality)
+                                       nationality: nationality.uppercaseString)
                 personData.append(newPerson)
             }
             else{
@@ -149,4 +152,3 @@ class MasterViewController: UITableViewController,NSURLSessionDelegate {
         task.resume()
     }
 }
-

@@ -10,10 +10,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
-    var detailItem: AnyObject? {
+    @IBOutlet var nameLabel: UILabel?
+    @IBOutlet var phoneLabel:UILabel?
+    @IBOutlet var emailLabel:UILabel?
+    @IBOutlet var loginLabel:UILabel?
+    @IBOutlet var locationLabel:UILabel?
+    @IBOutlet var stateLabel:UILabel?
+    @IBOutlet var personImageView:UIImageView?
+    
+    var person:Person? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,10 +27,20 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
+        if let person = self.person {
+                personImageView?.hnk_setImageFromURL(person.largeImageURL)
+                nameLabel?.text = person.firstName + " " + person.lastName
+                phoneLabel?.text = "Cell: "+person.phoneNumber
+                emailLabel?.text = "email: " + person.email
+                loginLabel?.text = "User: "+person.loginUsername+" Password: "+person.loginPassword
+                locationLabel?.text = "Address: "+person.streetLocation+", "+person.cityLocation
+                stateLabel?.text = person.stateLocation+" "+person.nationality
+                nameLabel?.adjustsFontSizeToFitWidth
+                phoneLabel?.adjustsFontSizeToFitWidth
+                emailLabel?.adjustsFontSizeToFitWidth
+                loginLabel?.adjustsFontSizeToFitWidth
+                locationLabel?.adjustsFontSizeToFitWidth
+                stateLabel?.adjustsFontSizeToFitWidth
         }
     }
 
@@ -34,12 +49,6 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
